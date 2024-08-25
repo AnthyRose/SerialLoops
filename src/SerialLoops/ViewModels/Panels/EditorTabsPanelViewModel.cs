@@ -65,6 +65,8 @@ namespace SerialLoops.ViewModels.Panels
                     return new BackgroundMusicEditorViewModel((BackgroundMusicItem)item, MainWindow, _project, _log);
                 case ItemDescription.ItemType.System_Texture:
                     return new SystemTextureEditorViewModel((SystemTextureItem)item, MainWindow, _project, _log);
+                case ItemDescription.ItemType.Topic:
+                    return new TopicEditorViewModel((topicItem)item, MainWindow, _project, _log);
                 default:
                     _log.LogError(Strings.Invalid_item_type_);
                     return null;
