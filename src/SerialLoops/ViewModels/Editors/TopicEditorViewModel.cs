@@ -24,6 +24,7 @@ namespace SerialLoops.ViewModels.Editors
     {
         public TopicItem Topic { get; set; }
         public string TopicDisplayName => $"{Topic.DisplayName}";
+        public string TopicEnteryElement => $"{Topic.TopicEntry}";
 
         public TopicEditorViewModel(TopicItem item, MainWindowViewModel window, Project project, ILogger log) : base(item, window, log, project)
         {

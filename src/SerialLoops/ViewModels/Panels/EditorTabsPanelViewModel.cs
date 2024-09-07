@@ -65,8 +65,8 @@ namespace SerialLoops.ViewModels.Panels
                     return new SystemTextureEditorViewModel((SystemTextureItem)item, MainWindow, _project, _log);
                 case ItemDescription.ItemType.Voice:
                     return new VoicedLineEditorViewModel((VoicedLineItem)item, MainWindow, _log);
-                //case ItemDescription.ItemType.Topic:
-                //    return new TopicEditorViewModel((TopicItem)item, MainWindow, _project, _log);
+                case ItemDescription.ItemType.Topic:
+                    return new TopicEditorViewModel((TopicItem)item, MainWindow, _project, _log);
                 default:
                     _log.LogError(Strings.Invalid_item_type_);
                     return null;
